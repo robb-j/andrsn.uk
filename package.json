@@ -1,0 +1,38 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "Project setup by robb-j/node-base",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build src/index.pug --public-url /",
+    "coverage": "nyc --reporter=html mocha test/unit",
+    "coverage-summary": "nyc --reporter=text-summary mocha test/unit",
+    "dev": "parcel src/index.pug",
+    "lint": "eslint src test",
+    "postversion": "node tools/buildAndPush.js latest",
+    "start": "node src",
+    "test": "mocha test/unit"
+  },
+  "author": "robb-j",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.8"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.1.0",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.7",
+    "nyc": "^11.4.1",
+    "parcel-bundler": "^1.6.2",
+    "parcel-plugin-pug": "^0.2.7"
+  }
+}
