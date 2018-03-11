@@ -1,11 +1,15 @@
+//
+// Bulma Customisation
+//
+
 $primary: #c1656b
-// $link: #4F6D7A
-
 $family-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace
-
 $body-family: Poppins, sans-serif
-
 @import 'bulma/bulma'
+
+//
+// Custom Reusable Classes
+//
 
 .is-monospace
   font-family: $family-monospace
@@ -23,21 +27,47 @@ $body-family: Poppins, sans-serif
   > main
     flex: 1
 
+.button
+  &.twitter
+    background-color: #1DA1F2
+    color: white
+  &.github
+    background-color: black
+    color: white
+  &.dockerhub
+    background-color: #066DA5
+    color: white
+  &.is-circle
+    display: inline-flex
+    flex-direction: column
+    border-radius: $radius-rounded
+    vertical-align: middle
+    > *
+      transform: scale(0.7)
+
+//
+// Grid System
+//
+
 .content-grid
   display: grid
-  grid-gap: 16px
+  grid-gap: 16px 22px
+  max-width: 1024px
+  margin: auto
   
   +tablet
     $cell-size: 84px
+    grid-gap: 16px 22px
     grid-template-areas: 'face content' 'links content'
     grid-template-columns: 3fr 7.5fr
     grid-template-rows: 3fr 1fr
     grid-template-areas: 'face content' 'links content'
   
   +mobile
+    grid-gap: 8px
     grid-template-columns: repeat(5, 1fr)
-    grid-template-rows: 1fr 1fr auto
-    grid-template-areas: 'face face links links links' 'face face links links links' 'content content content content content'
+    grid-template-rows: 1fr auto
+    grid-template-areas: 'face face links links links' 'content content content content content'
     padding: 0.5em
   
   > .my-pretty-face
@@ -46,6 +76,10 @@ $body-family: Poppins, sans-serif
     grid-area: links
   > .all-about-me
     grid-area: content
+
+//
+// Specific styles
+//
 
 .my-pretty-face img
   border-radius: $radius-rounded
@@ -63,21 +97,3 @@ footer
   a
     color: $grey-darker
     font-weight: bold
-
-.button
-  &.twitter
-    background-color: #1DA1F2
-    color: white
-  &.github
-    background-color: black
-    color: white
-  &.dockerhub
-    background-color: #066DA5
-    color: white
-  &.is-circle
-    display: inline-flex
-    flex-direction: column
-    border-radius: $radius-rounded
-    vertical-align: middle
-    .icon
-      transform: scale(0.7)

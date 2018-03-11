@@ -1,0 +1,11 @@
+
+//- A util to pad some text or a bit of content with whitespace
+mixin space(value)
+  if block
+    | #{' '}
+    block
+    | #{' '}
+  if value
+    | #{' ' + value + ' '}
+  else
+    | #{' '}

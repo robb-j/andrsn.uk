@@ -24,7 +24,6 @@ module.exports = {
     
     /* Rob's tweaks */
     
-    
     // Disallow trailing spaces, exept on blank lines
     'no-trailing-spaces': ["error", { "skipBlankLines": true }],
     

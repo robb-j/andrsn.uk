@@ -1,29 +1,29 @@
-# Node Sample Project
+# andrsn.uk
 
-A project setup with [robb-j/node-base](https://github.com/robb-j/node-base/) template which creates a node app, with the common things already setup.
+This is the source code for [andrsn.uk](), setup with [robb-j/node-base](https://github.com/robb-j/node-base/).
+
+#### Built with
+
+* [Pug](https://pugjs.org/api/getting-started.html)
+* [Sass](https://sass-lang.com/)
+* [Parcel](https://parceljs.org/)
+* [Bulma](https://bulma.io/)
+* [Fontawesome](https://fontawesome.com)
+
 
 ## Dev Commands
 
 ```bash
+# Run the dev
+npm run dev
 
-# Build & publish the image (from node-9:alpine)
-# -> uses REGISTRY file & the npm version to tag image
-npm run push-image
+# Build the assets
+npm run build
 
 # Update version (builds & pushes a new docker image)
-npm version ... # --help
+# -> it uses the REGISTRY file & the npm version to tag the new image
+npm version # (major|minor|patch) --help
 
 # Lint the web & test directories
 npm run lint
-
-# Run the unit tests
-npm test
-
-# Generate coverage
-npm run coverage          # outputs to coverage/
-npm run coverage-summary  # outputs to terminal
-
-# Watch code with nodemon (restarts on file changes)
-npm run watch
-
 ```

@@ -1,20 +1,14 @@
 doctype html
 
-mixin space(value)
-  if block
-    | #{' '}
-    block
-    | #{' '}
-  if value
-    | #{' ' + value + ' '}
-  else
-    | #{' '}
+include pug/mixins.pug
 
 head
   title Rob Anderson
   meta(charset="UTF-8")
+  link(rel="icon", href="./img/favicon.png")
   meta(name="viewport" content="width=device-width, initial-scale=1")
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:200|Poppins")
+  include pug/opengraph.pug
 
 body.is-full-layout
   header.hero.is-primary.is-bold
@@ -27,61 +21,16 @@ body.is-full-layout
       .my-pretty-face
         img(src="./img/me.jpg")
       .where-i-hide-online
-        a.button.is-circle.is-large.twitter(
-          href="https://twitter.com/Robbb_J"
-        )
+        a.button.is-circle.is-large.twitter(href="https://twitter.com/Robbb_J")
           i.icon.fab.fa-twitter
-        a.button.is-circle.is-large.github(
-          href="https://r.r0b.io"
-        )
+        a.button.is-circle.is-large.github(href="https://r.r0b.io")
           i.icon.fab.fa-github
-        a.button.is-circle.is-large.dockerhub(
-          href="https://i.r0b.io"
-        )
+        a.button.is-circle.is-large.dockerhub(href="https://i.r0b.io")
           i.icon.fab.fa-docker
       .all-about-me
-        p 
-          | I am a developer interested in making cool things both on the web and in apps.
-          | By day I'm a Research Software Engineer at
-          +space
-          a(href="https://openlab.ncl.ac.uk") Open Lab
-          | , a cross-disciplinary research group at Newcastle University. I make web technologies and apps to support researcher's projects ranging from 
-          +space
-            a(href="https://metrofutures.org.uk", target="_blank") Transport Engagements
-          | through
-          +space
-            a(href="https://make.place/spotter/", target="_blank") Geolocation based tools
-          | all the way to
-          +space
-            a(href="https://whatfutures.org/", target="_blank") Global WhatsApp games.
-        br
-        p To make these projects happen I make use of a lot of technologies and methodologies. I'm a keen test driven developer and agile worker and always like to try out and use different frameworks. For instance this site uses
-          +space
-            a(href="https://parceljs.org/", taget="_blank") Parcel
-          | and
-          +space
-            a(href="https://pugjs.org") Pug
-          | with a sprinkle of
-          +space
-            a(href="https://sass-lang.com/") Sass.
-          | To host all my projects I use
-          +space
-            a(href="https://www.docker.com/") Docker
-          | to containerize and orchestrate my web stacks so that they are robust and go down as little as possible and I'm quite excited about
-          +space
-            a(href="https://kubernetes.io/") Kubernetes
-          | at the moment.
-        br
-        p My latest projects are always on
-          +space
-            a(href="https://github.com/robb-j") GitHub
-          +space('and my latest ramblings are on ')
-          a(href="https://twitter.com/Robbb_J") Twitter
-          | .
+        include pug/about.pug
   footer.has-text-centered.is-monospace
     | View source on
     |
     a(href="https://github.com/robb-j/andrsn.uk") GitHub
-  
   script(src="./js/index.js")
-  //- script(src="@fortawesome/fontawesome")
