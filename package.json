@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "parcel build src/index.pug --public-url /",
-    "coverage": "nyc --reporter=html mocha test/unit",
-    "coverage-summary": "nyc --reporter=text-summary mocha test/unit",
     "dev": "parcel src/index.pug",
-    "lint": "eslint src test",
+    "lint": "eslint src",
     "postversion": "node tools/buildAndPush.js latest",
-    "start": "node src",
-    "test": "mocha test/unit"
+    "test": "echo \"\nNo start script\n\"; exit 1",
+    "test": "echo \"\nNo test script\n\"; exit 1"
   },
   "author": "robb-j",
   "license": "ISC",
@@ -31,10 +29,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "jstransformer-markdown-it": "^2.0.0",
-    "mocha": "^4.1.0",
     "node-sass": "^4.7.2",
-    "nodemon": "^1.14.7",
-    "nyc": "^11.4.1",
     "parcel-bundler": "^1.6.2"
   }
 }
