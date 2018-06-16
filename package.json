@@ -19,7 +19,8 @@
     "@fortawesome/fontawesome": "^1.1.4",
     "@fortawesome/fontawesome-free-brands": "^5.0.8",
     "bulma": "^0.6.2",
-    "parcel-plugin-pug": "^0.2.7"
+    "parcel-plugin-pug": "^0.2.7",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "chai": "^4.1.2",
