@@ -1,14 +1,14 @@
 {
   "name": "test",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Project setup by robb-j/node-base",
   "main": "index.js",
   "scripts": {
     "build": "parcel build src/index.pug --public-url /",
     "dev": "parcel src/index.pug",
-    "lint": "eslint src test",
+    "lint": "eslint src",
     "postversion": "node tools/buildAndPush.js latest",
-    "start": "node src"
+    "test": "echo \"\nNo test script\n\"; exit 1"
   },
   "author": "robb-j",
   "license": "ISC",

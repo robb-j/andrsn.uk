@@ -7,8 +7,7 @@ module.exports = {
     ecmaVersion: 2017
   },
   env: {
-    browser: true,
-    mocha: true
+    browser: true
   },
   extends: 'standard',
   
@@ -23,15 +22,8 @@ module.exports = {
     
     
     /* Rob's tweaks */
-    
-    // Disallow trailing spaces, exept on blank lines
-    'no-trailing-spaces': ["error", { "skipBlankLines": true }],
-    
-    // Make else & catch on line after '}'
-    'brace-style': ["error", "stroustrup", { "allowSingleLine": true } ],
-    
-    // Only warn for unused variables
     'no-unused-vars': 'warn',
+    'no-trailing-spaces': [ 'error', { 'skipBlankLines': true } ]
   },
   
   // Custom globals ... don't use globals
