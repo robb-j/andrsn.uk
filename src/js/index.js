@@ -1,13 +1,10 @@
 import '../sass/index.sass'
 
-import brandIcons from '@fortawesome/fontawesome-free-brands'
-import fontawesome from '@fortawesome/fontawesome'
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
 
-import WebFont from 'webfontloader'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
+import { faDocker } from '@fortawesome/free-brands-svg-icons/faDocker'
 
-// Register icons & setup fontawesome
-fontawesome.library.add(brandIcons)
-fontawesome.dom.i2svg()
-
-// Load web fonts
-WebFont.load({ google: { families: [ 'Montserrat:200', 'Poppins' ] } })
+library.add(faTwitter, faGithub, faDocker)
+dom.watch()
