@@ -14,10 +14,10 @@ This is the source code for [andrsn.uk](), setup with [robb-j/node-base](https:/
 ## Dev Commands
 
 ```bash
-# Run the dev
-npm run dev
+# Run the dev server
+npm run serve
 
-# Build the assets
+# Build the web assets to dist
 npm run build
 
 # Update version (builds & pushes a new docker image)
